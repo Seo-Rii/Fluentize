@@ -1,1 +1,0 @@
-{"version":3,"file":"button.js","sourceRoot":"","sources":["../../../src/ts/component/button.ts"],"names":[],"mappings":";;;AAAA;IAGI,gBAAY,EAAE;QAAd,iBAKC;QAJG,IAAI,CAAC,EAAE,GAAG,EAAE,CAAC;QACb,IAAI,CAAC,EAAE,CAAC,gBAAgB,CAAC,SAAS,EAAE;YAChC,KAAI,CAAC,EAAE,CAAC,SAAS,CAAC,GAAG,CAAC,SAAS,CAAC,CAAA;QACpC,CAAC,CAAC,CAAA;IACN,CAAC;IACL,aAAC;AAAD,CAAC,AATD,IASC;AAEO,wBAAM"}

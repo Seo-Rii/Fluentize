@@ -1,6 +1,7 @@
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-module.exports = {
+let tsToJs = {
     mode: "development",
     devtool: "inline-source-map",
     entry: {
@@ -22,3 +23,5 @@ module.exports = {
         ]
     }
 };
+
+module.exports = tsToJs;

@@ -5,6 +5,8 @@
   width: fit-content;
   background: #00000033;
   cursor: pointer;
+  user-select: none;
+  border: none;
 }
 
 @keyframes buttonClickAfterAnimation {

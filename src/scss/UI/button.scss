@@ -9,6 +9,9 @@
   width: fit-content;
   background: $BaseLow;
   cursor: pointer;
+  user-select: none;
+  border: none;
+
 
   @include clickAfterAnimation(buttonClickAfterAnimation, $button-click-size, var(--btn-rotate));
 

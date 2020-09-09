@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run build && npm run copy-to-test",
-    "build": "npm run build-css && npm run build-css-min && npm run build-js",
+    "build": "npm run build-css && npm run build-css-min && npm run build-js && npm run build-js-min",
     "build-js": "webpack",
+    "build-js-min": "uglifyjs dist/js/fluentize.js -o dist/js/fluentize.min.js",
     "build-css": "node-sass --include-path src/scss src/scss/main.scss dist/css/fluentize.css --output-style expanded",
     "build-css-min": "node-sass --include-path src/scss src/scss/main.scss dist/css/fluentize.min.css --output-style compressed",
-    "copy-to-test": "ncp dist/css/fluentize.min.css example/fluentize.css && ncp dist/js/fluentize.js example/fluentize.js"
+    "copy-to-test": "ncp dist/css/fluentize.min.css example/fluentize.css && ncp dist/js/fluentize.min.js example/fluentize.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,8 @@
     "node-sass": "^4.14.1",
     "ts-loader": "^8.0.3",
     "typescript": "^4.0.2",
+    "uglify-js": "^3.10.4",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }
