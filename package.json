@@ -1,0 +1,31 @@
+{
+  "name": "fluentize",
+  "version": "0.0.1",
+  "description": "CSS Framework for Microsoft Fluent Design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build-css && npm run build-css-min",
+    "build-css": "node-sass --include-path src/style src/style/main.scss dist/fluentize.css",
+    "build-css-min": "node-sass --include-path src/style src/style/main.scss dist/fluentize.min.css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seo-Rii/Fluentize.git"
+  },
+  "keywords": [
+    "fluent",
+    "microsoft",
+    "css",
+    "framework"
+  ],
+  "author": "SeoRii",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Seo-Rii/Fluentize/issues"
+  },
+  "homepage": "https://github.com/Seo-Rii/Fluentize#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
