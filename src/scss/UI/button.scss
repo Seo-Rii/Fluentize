@@ -1,29 +1,28 @@
+@import "../theme/default.scss";
+
 .button {
   $button-click-size: 0.92;
 
   box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  padding: 10px 20px;
-  margin: 10px 5px;
+  padding: 5px 10px;
+  margin: 5px 5px;
   width: fit-content;
+  background: $BaseLow;
+  cursor: pointer;
 
   @include clickAfterAnimation(buttonClickAfterAnimation, $button-click-size, var(--btn-rotate));
 
   &.click {
     box-shadow: none !important;
+    background: $BaseMediumLow;
     transform: perspective(125px) rotateX(var(--btn-rotate)) scale($button-click-size);
   }
 
   &:hover {
-    box-shadow: 0 0 0 3px #888 inset;
+    box-shadow: 0 0 0 3px $BaseMediumLow inset;
   }
 
   &.release {
     animation: buttonClickAfterAnimation 0.5s;
   }
-}
-
-
-.button {
-  background: #444444;
 }

@@ -1,1 +1,18 @@
-$theme: #107C10;
+$BaseLow: #00000033;
+$BaseMediumLow: #00000066;
+$BaseMedium: #00000099;
+$BaseMediumHigh: #000000CC;
+$BaseHigh: #000000FF;
+
+$AltLow: #FFFFFF33;
+$AltMediumLow: #FFFFFF66;
+$AltMedium: #FFFFFF99;
+$AltMediumHigh: #FFFFFFCC;
+$AltHigh: #FFFFFFFF;
+
+$ListLow: #00000033;
+$ListMedium: #00000099;
+$ListAccentLow: rgba(var(--accent-color), 66);
+$ListAccentMedium: rgba(var(--accent-color), 99);
+$ListAccentHigh: rgba(var(--accent-color), B2);
+

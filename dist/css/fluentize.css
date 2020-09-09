@@ -1,0 +1,35 @@
+.button {
+  box-sizing: border-box;
+  padding: 5px 10px;
+  margin: 5px 5px;
+  width: fit-content;
+  background: #00000033;
+  cursor: pointer;
+}
+
+@keyframes buttonClickAfterAnimation {
+  0% {
+    transform: perspective(125px) rotateX(var(--btn-rotate)) scale(0.92);
+  }
+  100% {
+  }
+}
+
+.button.click {
+  box-shadow: none !important;
+  background: #00000066;
+  transform: perspective(125px) rotateX(var(--btn-rotate)) scale(0.92);
+}
+
+.button:hover {
+  box-shadow: 0 0 0 3px #00000066 inset;
+}
+
+.button.release {
+  animation: buttonClickAfterAnimation 0.5s;
+}
+
+:root {
+  --btn-rotate: 0;
+  --accent-color: #0078d4;
+}

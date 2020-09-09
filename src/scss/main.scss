@@ -2,10 +2,9 @@
 
 @import "animation/click.scss";
 
-@import "theme/default.scss";
-
 @import "UI/button.scss";
 
 :root {
   --btn-rotate: 0;
+  --accent-color: #0078d4;
 }
