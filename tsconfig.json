@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "CommonJS",
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist/js/",
+    "rootDir": "./src/ts/"
+  },
+  "include": [
+    "./src/ts/**/*"
+  ],
+  "files": [
+    "./src/ts/Fluentize.ts"
+  ]
+}

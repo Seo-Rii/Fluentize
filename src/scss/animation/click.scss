@@ -1,0 +1,10 @@
+@mixin clickAfterAnimation($name, $size: 0.97, $rotate:0) {
+  @keyframes #{$name} {
+    0% {
+      transform: perspective(125px) rotateX($rotate) scale($size);
+    }
+    100% {
+
+    }
+  }
+}
