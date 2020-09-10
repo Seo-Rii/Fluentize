@@ -8,7 +8,8 @@
     "rootDir": "./src/ts/"
   },
   "include": [
-    "./src/ts/**/*"
+    "./src/ts/**/*",
+    "./node_modules/on-change/**/*"
   ],
   "files": [
     "./src/ts/Fluentize.ts"
