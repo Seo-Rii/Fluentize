@@ -1,11 +1,11 @@
-import {Button} from './component/button';
+import {Button, Button_init} from './component/button';
+import {Checkbox, Checkbox_init} from './component/checkbox';
 import {createClickEvent} from './api/click';
 
 function Fluentize_init() {
-    document.querySelectorAll('.button').forEach((el) => {
-        createClickEvent();
-        new Button(el);
-    })
+    createClickEvent();
+    Button_init();
+    Checkbox_init();
 }
 
 document.addEventListener('DOMContentLoaded', () => {

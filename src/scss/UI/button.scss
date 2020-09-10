@@ -13,19 +13,19 @@
   border: none;
 
 
-  @include clickAfterAnimation(buttonClickAfterAnimation, $button-click-size, var(--btn-rotate));
+  @include clickAfterAnimation(buttonClickAfterAnimation, $button-click-size, var(--fluent-btn-rotate));
 
-  &.click {
+  &.--fluent-click {
     box-shadow: none !important;
     background: $BaseMediumLow;
-    transform: perspective(125px) rotateX(var(--btn-rotate)) scale($button-click-size);
+    transform: perspective(125px) rotateX(var(--fluent-btn-rotate)) scale($button-click-size);
   }
 
   &:hover {
     box-shadow: 0 0 0 3px $BaseMediumLow inset;
   }
 
-  &.release {
+  &.--fluent-release {
     animation: buttonClickAfterAnimation 0.5s;
   }
 }

@@ -1,38 +1,19 @@
-class Button {
-    el: HTMLElement;
-    isHover: Boolean;
-    isClicked: Boolean;
+import {Form} from './common/form';
 
-
+class Button extends Form {
     constructor(el) {
-        this.el = el;
-        this.isHover = false;
-        this.isClicked = false;
-        this.el.addEventListener('mouseenter', () => {
-            this.isHover = true;
-            this.el.classList.remove('release');
-            if (this.isClicked) this.el.classList.add('click');
-        });
-        this.el.addEventListener('mouseleave', () => {
-            this.isHover = false;
-            this.el.classList.remove('click');
-            if (this.isClicked) this.el.classList.add('release');
-        });
+        super(el);
         this.el.addEventListener('mousedown', (e: MouseEvent) => {
             let deg: number = (-e.offsetY / this.el.offsetHeight + 0.5) * 2 * 8;
-            this.isClicked = true;
-            document.documentElement.style.setProperty('--btn-rotate', `${deg}deg`);
-            this.el.classList.add('click');
-            this.el.classList.remove('release');
-        });
-        document.addEventListener('mouseStateChange', (e: CustomEvent) => {
-            if (e.detail > 0) return;
-            if (!this.isClicked) return;
-            this.isClicked = false;
-            this.el.classList.remove('click');
-            this.el.classList.add('release');
+            document.documentElement.style.setProperty('--fluent-btn-rotate', `${deg}deg`);
         });
     }
 }
 
-export {Button};
+function Button_init() {
+    document.querySelectorAll('.button').forEach((el) => {
+        new Button(el);
+    })
+}
+
+export {Button, Button_init};

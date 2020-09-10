@@ -11,27 +11,79 @@
 
 @keyframes buttonClickAfterAnimation {
   0% {
-    transform: perspective(125px) rotateX(var(--btn-rotate)) scale(0.92);
+    transform: perspective(125px) rotateX(var(--fluent-btn-rotate)) scale(0.92);
   }
   100% {
   }
 }
 
-.button.click {
+.button.--fluent-click {
   box-shadow: none !important;
   background: #00000066;
-  transform: perspective(125px) rotateX(var(--btn-rotate)) scale(0.92);
+  transform: perspective(125px) rotateX(var(--fluent-btn-rotate)) scale(0.92);
 }
 
 .button:hover {
   box-shadow: 0 0 0 3px #00000066 inset;
 }
 
-.button.release {
+.button.--fluent-release {
   animation: buttonClickAfterAnimation 0.5s;
 }
 
+.--fluent-checkbox-container {
+  cursor: pointer;
+  margin-left: -10px;
+}
+
+.--fluent-checkbox-container input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 3px solid #000000CC;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+  top: 7px;
+}
+
+.--fluent-checkbox-container.--fluent-hover input[type=checkbox] {
+  border: 3px solid #000000FF;
+}
+
+.--fluent-checkbox-container:before {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: relative;
+  top: -5px;
+  left: 24px;
+  border: 2px solid white;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  transform: rotate(-45deg);
+  display: inline-block;
+  z-index: 1;
+}
+
+.--fluent-checkbox-container.--fluent-checkbox-checked:before {
+  opacity: 1;
+}
+
+.--fluent-checkbox-container.--fluent-checkbox-checked input[type=checkbox] {
+  background: var(--fluent-accent-color);
+  border: none;
+}
+
+.--fluent-checkbox-container.--fluent-click input[type=checkbox] {
+  background: #00000099;
+  border: none;
+}
+
 :root {
-  --btn-rotate: 0;
-  --accent-color: #0078d4;
+  --fluent-btn-rotate: 0;
+  --fluent-accent-color: #0078d4;
 }
