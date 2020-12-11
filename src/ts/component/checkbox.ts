@@ -37,9 +37,24 @@ class Checkbox extends Form {
     }
 }
 
+const checkbox_observer = function (mutationsList, observer) {
+    for (const mutation of mutationsList) {
+        console.log(mutation.attributeName)
+        if (mutation.type === 'attributes' && mutation.attributeName === 'disabled') {
+            console.log(mutation.target.disabled)
+            if (mutation.target.disabled) mutation.target.parentNode.classList.add('--fluent-disabled');
+            else mutation.target.parentNode.classList.remove('--fluent-disabled');
+        }
+    }
+};
+
 function Checkbox_init() {
+    const observer = new MutationObserver(checkbox_observer);
     document.querySelectorAll('label').forEach((el) => {
-        if (el.querySelector('input[type=checkbox]')) new Checkbox(el);
+        if (el.querySelector('input[type=checkbox]')) {
+            new Checkbox(el);
+            observer.observe(el, {attributes: true, childList: true, subtree: true});
+        }
     });
 }
 

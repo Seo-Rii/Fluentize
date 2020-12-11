@@ -27,7 +27,7 @@
 
   &:not(.--fluent-disabled) {
     cursor: pointer;
-    margin-left: -13px;
+    margin-left: -16px;
 
     &.--fluent-hover {
       input[type=checkbox] {
@@ -41,7 +41,7 @@
       height: 4px;
       position: relative;
       top: -5px;
-      left: 26px;
+      left: 24px;
       border: 2px solid white;
       border-top: none;
       border-right: none;

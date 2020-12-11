@@ -1,9 +1,10 @@
-const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 let tsToJs = {
     mode: "development",
     devtool: "inline-source-map",
+    target: "es5",
     entry: {
         main: "./src/ts/Fluentize.ts",
     },
